@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="ToiletLogs.js"></script>
+
+</head>
+
+<body>
+
+<div data-role="page" id="page">
+    <div data-role="header">
+        <h1>SuperMarket Logger</h1>
+    </div>
+    <div data-role="content">
+        <ul data-role="listview" data-ajax="false" data-inset="true" data-theme="a">   
+            <li><a id="btn1" data-value="Quiltex">Quiltex</a></li>
+            <li><a id="btn2" data-value="Kleenox">Kleenox</a></li>
+            <li><a id="btn3" data-value="InHouseBrand">InHouseBrand</a></li>
+            <li><a id="btn4" data-value="AbSorbent">AbSorbent</a></li>
+            <li><a id="btn5" data-value="SoftLife">SoftLife</a></li>
+
+        </ul>
+    </div>
+    <div data-role="footer">
+        <h3 style="text-align: left">&#169;CQUniversity,2020.</h3>
+    </div>
+</div>
+<div data-role="page" id="page2">
+    <div data-role="header">
+        <button class="ui-btn ui-btn-inline ui-corner-all" id="resetBtn">Clear</button>
+        <h1 id="category1"></h1>
+        <button class="ui-btn ui-btn-inline ui-corner-all" id="shwLogbtn">Show Logs</button>
+    </div>
+    <div data-role="content">
+
+             
+        <label>Product Code:</label>
+        <input type="text" placeholder="XXXX" id="productCode">
+        <label>Number Of Rolls Stacked:</label>
+        <input type="text" placeholder="0->1000" id="NoOfRolls">
+        <label>Width(cm):</label>
+        <input type="text" placeholder="0->15" id="width">
+        <label>Length(cm):</label>
+        <input type="text" placeholder="0->15" id="length">
+        <label>Softness:</label>
+        <select id="softness">
+                    <option value="not-specified"></option>
+                    <option value="Single-Ply">Single-Ply</option>
+                    <option value="2-Ply">2-Ply</option>
+            <option value="3-Ply">3-Ply</option>
+        </select>
+        <hr style="border-top: 2px solid #e9e9e9;">
+        <button class="ui-btn ui-corner-all" id="submit">Save Log Entry</button>
+
+    </div>
+
+    <div data-role="footer">
+        <button class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-r ui-btn-icon-left" id="nxtbtn">Next</button>
+        <button class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left" id="prebtn">Previous</button>
+        <button class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-left" id="homebtn1">Home</button>
+    </div>
+</div>
+<div data-role="page" id="page3">
+
+    <div data-role="header">
+        <button class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-left">Get</button>
+        <h1 id="category2"></h1>
+        <button class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-left" id="send">Send</button>
+    </div>
+
+    <div data-role="content">
+        <h2 style="text-align: left">Current Log Entries</h2>
+        <span>Date ,Latitude ,Longitude ,Code ,No of Rolls ,Weight ,Length ,Softness ,Category</span>
+        <p id="result"></p>
+    </div>
+
+    <div data-role="footer">
+        <button class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-left" id="homebtn2">Home</button>
+    </div>
+
+
+</div>
+</body>
+
+</html>
